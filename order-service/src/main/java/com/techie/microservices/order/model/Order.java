@@ -24,9 +24,4 @@ public class Order {
     private Integer quantity;
 
 
-
-    public void setOrderNumber(String orderNumber)
-    {
-        this.orderNumber = orderNumber;
-    }
 }

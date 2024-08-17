@@ -21,8 +21,8 @@ public class NotificationService {
         log.info("Got Message from order-placed topic{}", orderPlacedEvent);
         MimeMessagePreparator messagePreparator = mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-            messageHelper.setFrom("iambhumigoswami@gmail.com");
-            messageHelper.setTo("iamhardikjogi@gmail.com");
+            messageHelper.setFrom("xxx@gmail.com");
+            messageHelper.setTo("yyy@gmail.com");
             messageHelper.setSubject(String.format("Your Order with OrderNumber %s is placed successfully", orderPlacedEvent.getOrderNumber()));
             messageHelper.setText(String.format("""
                     Hi
@@ -39,7 +39,7 @@ public class NotificationService {
             log.info("Order Notification email sent!!");
         } catch (MailException e){
             log.error("Exception occurred when sending mail", e);
-            throw new RuntimeException("Exception occured when  sending mail to iambhumigoswami@gmail.com", e);
+            throw new RuntimeException("Exception occured when  sending mail to xxx@gmail.com", e);
         }
         }
 
